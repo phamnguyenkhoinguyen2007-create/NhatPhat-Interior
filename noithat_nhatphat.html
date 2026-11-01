@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nội Thất Nhật Phát - Tủ Nhôm, Cửa Nhôm, Kính Cường Lực, Bàn Ghế Cao Cấp</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            DEFAULT: '#f59e0b',
+                            dark: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Outfit"', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .tab-btn.active {
+            background-color: #2563eb;
+            color: #ffffff;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Top Info Bar -->
+    <div class="bg-slate-900 text-slate-300 text-xs sm:text-sm py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
+                <span><i class="fa-solid fa-location-dot text-amber-400 mr-1.5"></i> 457 Đ. La Thành, P. Thành Công, Q. Ba Đình, Hà Nội</span>
+                <span class="hidden md:inline text-slate-600">|</span>
+                <span><i class="fa-solid fa-id-card text-blue-400 mr-1.5"></i> MST: 0108286072</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:098xxxxxxx" class="text-amber-400 font-semibold hover:text-amber-300 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone-volume animate-pulse"></i> Hotline: 098x xxx xxx
+                </a>
+                <span class="text-slate-600">|</span>
+                <span class="text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 8:00 - 18:00 (T2 - CN)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-700 to-blue-500 flex items-center justify-center text-white text-2xl font-black shadow-md group-hover:scale-105 transition transform">
+                    <i class="fa-solid fa-couch"></i>
+                </div>
+                <div>
+                    <span class="font-heading font-black text-xl sm:text-2xl tracking-tight text-slate-900 block leading-tight">
+                        NHẬT PHÁT
+                    </span>
+                    <span class="text-xs font-semibold tracking-wider uppercase text-blue-600">
+                        Nội Thất &amp; Nhôm Kính
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
+                <a href="#home" class="hover:text-blue-600 transition">Trang Chủ</a>
+                <a href="#about" class="hover:text-blue-600 transition">Về Chúng Tôi</a>
+                <a href="#products" class="hover:text-blue-600 transition">Sản Phẩm Key</a>
+                <a href="#strengths" class="hover:text-blue-600 transition">Ưu Điểm</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Liên Hệ</a>
+            </nav>
+
+            <!-- Call to action button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition shadow-lg shadow-blue-500/25 flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> Nhận Báo Giá
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-slate-700 font-semibold hover:text-blue-600">Trang Chủ</a>
+            <a href="#about" class="block py-2 text-slate-700 font-semibold hover:text-blue-600">Về Chúng Tôi</a>
+            <a href="#products" class="block py-2 text-slate-700 font-semibold hover:text-blue-600">Sản Phẩm Key</a>
+            <a href="#strengths" class="block py-2 text-slate-700 font-semibold hover:text-blue-600">Ưu Điểm</a>
+            <a href="#contact" class="block py-2 text-slate-700 font-semibold hover:text-blue-600">Liên Hệ</a>
+            <a href="#contact" class="inline-block w-full text-center py-2.5 rounded-xl bg-blue-600 text-white font-semibold text-sm">Nhận Báo Giá Ngay</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative overflow-hidden bg-slate-900 text-white py-16 sm:py-24">
+        <div class="absolute inset-0 z-0 opacity-30">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80" alt="Nội thất Nhật Phát" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent z-0"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
+                    Đơn vị sản xuất &amp; thi công nội thất hàng đầu Hà Nội
+                </div>
+                <h1 class="font-heading text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-white mb-6">
+                    CÔNG TY TNHH <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-300">NỘI THẤT NHẬT PHÁT</span>
+                </h1>
+                <p class="text-base sm:text-lg text-slate-300 mb-8 leading-relaxed font-light">
+                    Chuyên nghiệp - Uy tín - Chất lượng hàng đầu. Kiến tạo không gian sống sang trọng, hiện đại và bền bỉ với hệ sinh thái tủ nhôm kính, cửa nhôm, kính cường lực, bàn ghế cao cấp.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#products" class="px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm shadow-xl shadow-blue-600/30 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i class="fa-solid fa-cubes"></i> Xem Danh Mục Sản Phẩm
+                    </a>
+                    <a href="#contact" class="px-7 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/20 backdrop-blur-md transition flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Tư Vấn Khảo Sát Tận Nơi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-16 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Giới thiệu chung</span>
+                    <h2 class="font-heading text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-6">
+                        Giải Pháp Không Gian Sống Bền Đẹp &amp; Tối Ưu Chi Phí
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        <strong>Công ty TNHH Nội Thất Nhật Phát</strong> tự hào là đối tác tin cậy chuyên thiết kế, thi công và cung cấp các sản phẩm nội thất cao cấp cho gia đình, chung cư, nhà phố, văn phòng và các dự án kiến trúc thương mại.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        Với xưởng gia công hiện đại cùng đội ngũ kỹ thuật viên am hiểu vật liệu mới, chúng tôi luôn mang lại những công trình hoàn mỹ, đảm bảo độ chịu lực, khả năng cách âm, chống ẩm mốc và độ bền trọn đời.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="text-3xl font-extrabold text-blue-600 mb-1">1000+</div>
+                            <div class="text-xs text-slate-600 font-medium">Công trình hoàn thiện</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="text-3xl font-extrabold text-blue-600 mb-1">100%</div>
+                            <div class="text-xs text-slate-600 font-medium">Vật tư chính hãng</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                            <div class="text-3xl font-extrabold text-blue-600 mb-1">5 Năm</div>
+                            <div class="text-xs text-slate-600 font-medium">Bảo hành phụ kiện</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80" alt="Showroom Nội thất Nhật Phát" class="w-full h-[400px] object-cover hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa-solid fa-award text-2xl text-amber-300"></i>
+                            <div class="font-bold text-sm">Chất Lượng Vượt Trội</div>
+                        </div>
+                        <p class="text-xs text-blue-100 leading-relaxed">Đội ngũ thợ tay nghề cao, tỉ mỉ trong từng mối nối, đường keo và góc vát phụ kiện.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS TABS SECTION (Sản Phẩm Key) -->
+    <section id="products" class="py-16 sm:py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-100/70 px-3 py-1 rounded-full">Bộ sưu tập chủ lực</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+                    📦 Danh Mục Sản Phẩm Key
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Khám phá 5 dòng sản phẩm tiêu chuẩn kỹ thuật cao của Nội Thất Nhật Phát:
+                </p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
+                <button onclick="switchTab('tu-nhom')" id="tab-btn-tu-nhom" class="tab-btn active px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm transition flex items-center gap-2 bg-white text-slate-700 border border-slate-200">
+                    <i class="fa-solid fa-boxes-stacked"></i> Tủ nhôm kính
+                </button>
+                <button onclick="switchTab('cua-nhom')" id="tab-btn-cua-nhom" class="tab-btn px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm transition flex items-center gap-2 bg-white text-slate-700 border border-slate-200">
+                    <i class="fa-solid fa-door-open"></i> Cửa nhôm
+                </button>
+                <button onclick="switchTab('kinh')" id="tab-btn-kinh" class="tab-btn px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm transition flex items-center gap-2 bg-white text-slate-700 border border-slate-200">
+                    <i class="fa-regular fa-window-maximize"></i> Kính cường lực
+                </button>
+                <button onclick="switchTab('ban')" id="tab-btn-ban" class="tab-btn px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm transition flex items-center gap-2 bg-white text-slate-700 border border-slate-200">
+                    <i class="fa-solid fa-table"></i> Bàn nội thất
+                </button>
+                <button onclick="switchTab('ghe')" id="tab-btn-ghe" class="tab-btn px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm transition flex items-center gap-2 bg-white text-slate-700 border border-slate-200">
+                    <i class="fa-solid fa-chair"></i> Ghế cao cấp
+                </button>
+            </div>
+
+            <!-- Tab 1: Tủ nhôm kính -->
+            <div id="tab-tu-nhom" class="tab-content block bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-slate-200">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="rounded-xl overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80" alt="Tủ bếp nhôm kính cao cấp" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+                        <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 text-center font-medium">Tủ bếp nhôm kính cao cấp - Chống ẩm nước 100%</div>
+                    </div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 text-blue-600 text-xs font-bold mb-3">
+                            <i class="fa-solid fa-box-archive"></i> Bền đẹp theo thời gian
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-slate-900 mb-4">🗄️ Tủ Nhôm Kính Hiện Đại</h3>
+                        <ul class="space-y-3 text-slate-700 text-sm mb-6">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Tủ bếp nhôm hợp kim / sơn tĩnh điện:</strong> Kháng nước 100%, không mối mọt, không cong vênh, lau chùi dầu mỡ siêu sạch.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Tủ quần áo khung nhôm kính cánh kính Slim:</strong> Đẳng cấp thời thượng, kính phản quang sang trọng, tích hợp dải LED âm tủ.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Tủ trưng bày / tủ bán hàng:</strong> Khung chịu lực tốt, kính dày chịu lực, cửa lùa êm ái chống bụi hiệu quả.</span>
+                            </li>
+                        </ul>
+                        <div class="flex gap-3">
+                            <a href="#contact" class="px-5 py-2.5 rounded-lg bg-blue-600 text-white font-semibold text-xs sm:text-sm hover:bg-blue-700 transition">Yêu Cầu Báo Giá Tủ Nhôm</a>
+                            <a href="tel:098xxxxxxx" class="px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 font-semibold text-xs sm:text-sm hover:bg-slate-100 transition">Tư Vấn Thiết Kế</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Cửa nhôm -->
+            <div id="tab-cua-nhom" class="tab-content hidden bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-slate-200">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="rounded-xl overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?auto=format&fit=crop&w=1000&q=80" alt="Cửa nhôm kính hiện đại" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+                        <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 text-center font-medium">Hệ cửa nhôm kính cao cấp cách âm, cách nhiệt</div>
+                    </div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 text-blue-600 text-xs font-bold mb-3">
+                            <i class="fa-solid fa-door-closed"></i> Tiêu chuẩn Châu Âu
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-slate-900 mb-4">🚪 Cửa Nhôm Xingfa &amp; Hệ Slim</h3>
+                        <ul class="space-y-3 text-slate-700 text-sm mb-6">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Cửa nhôm Xingfa nhập khẩu:</strong> Kết cấu khoang rỗng cùng đường gân gia cường, cách âm và cách nhiệt vượt trội.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Cửa trượt lùa / Cửa mở quay / Xếp trượt:</strong> Linh hoạt thiết kế cho cửa đi chính, ban công và cửa sổ các tòa nhà.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Phụ kiện cao cấp đồng bộ:</strong> Kinlong, Hopo, Roto chính hãng, tay nắm mạ bền màu, bản lề chịu tải trọng cao.</span>
+                            </li>
+                        </ul>
+                        <div class="flex gap-3">
+                            <a href="#contact" class="px-5 py-2.5 rounded-lg bg-blue-600 text-white font-semibold text-xs sm:text-sm hover:bg-blue-700 transition">Báo Giá Cửa Nhôm</a>
+                            <a href="tel:098xxxxxxx" class="px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 font-semibold text-xs sm:text-sm hover:bg-slate-100 transition">Đo Đạc Tại Nhà</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Kính cường lực -->
+            <div id="tab-kinh" class="tab-content hidden bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-slate-200">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="rounded-xl overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80" alt="Vách kính cường lực" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+                        <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 text-center font-medium">Vách kính cường lực văn phòng &amp; phòng tắm</div>
+                    </div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 text-blue-600 text-xs font-bold mb-3">
+                            <i class="fa-solid fa-shield-halved"></i> An Toàn &amp; Hiện Đại
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-slate-900 mb-4">🪟 Kính Cường Lực &amp; Lan Can Kính</h3>
+                        <ul class="space-y-3 text-slate-700 text-sm mb-6">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Vách kính cường lực văn phòng / phòng tắm:</strong> Kính 10 - 12mm chịu lực gấp 5 lần, tối ưu ánh sáng tự nhiên.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Kính ốp bếp phong thủy:</strong> Chịu nhiệt độ cực cao từ bếp nấu, đa dạng bảng màu, không mạch vữa bám bẩn.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Lan can &amp; Cầu thang kính:</strong> Phụ kiện inox 304 không hoen gỉ, mở rộng tầm nhìn, an toàn cho trẻ nhỏ.</span>
+                            </li>
+                        </ul>
+                        <div class="flex gap-3">
+                            <a href="#contact" class="px-5 py-2.5 rounded-lg bg-blue-600 text-white font-semibold text-xs sm:text-sm hover:bg-blue-700 transition">Báo Giá Kính Cường Lực</a>
+                            <a href="tel:098xxxxxxx" class="px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 font-semibold text-xs sm:text-sm hover:bg-slate-100 transition">Khảo Sát Mặt Bằng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4: Bàn nội thất -->
+            <div id="tab-ban" class="tab-content hidden bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-slate-200">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="rounded-xl overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1000&q=80" alt="Bàn làm việc & Bàn ăn" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+                        <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 text-center font-medium">Bàn ăn &amp; bàn làm việc văn phòng phong cách tối giản</div>
+                    </div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 text-blue-600 text-xs font-bold mb-3">
+                            <i class="fa-solid fa-cubes-stacked"></i> Tối Giản &amp; Tinh Tế
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-slate-900 mb-4">🛋️ Bàn Nội Thất Gia Đình &amp; Công Sở</h3>
+                        <ul class="space-y-3 text-slate-700 text-sm mb-6">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Bàn làm việc văn phòng:</strong> Khung kim loại sơn tĩnh điện chống xước, thiết kế thông minh luồn dây cáp tiện lợi.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Bàn ăn gia đình:</strong> Mặt kính cường lực hoặc đá cẩm thạch sang trọng, chống bám bẩn và chống sốc nhiệt tốt.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Bàn trà / Bàn sofa:</strong> Thiết kế hình học độc đáo, tạo điểm nhấn nổi bật cho gian phòng khách.</span>
+                            </li>
+                        </ul>
+                        <div class="flex gap-3">
+                            <a href="#contact" class="px-5 py-2.5 rounded-lg bg-blue-600 text-white font-semibold text-xs sm:text-sm hover:bg-blue-700 transition">Đặt Mẫu Theo Kích Thước</a>
+                            <a href="tel:098xxxxxxx" class="px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 font-semibold text-xs sm:text-sm hover:bg-slate-100 transition">Xem Catalogue</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 5: Ghế cao cấp -->
+            <div id="tab-ghe" class="tab-content hidden bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-slate-200">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="rounded-xl overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=80" alt="Ghế cao cấp" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+                        <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 text-center font-medium">Ghế công thái học và ghế ăn bọc da cao cấp</div>
+                    </div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 text-blue-600 text-xs font-bold mb-3">
+                            <i class="fa-solid fa-heart-pulse"></i> Êm Ái &amp; Chuẩn Công Thái Học
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-slate-900 mb-4">🪑 Ghế Văn Phòng &amp; Ghế Gia Đình</h3>
+                        <ul class="space-y-3 text-slate-700 text-sm mb-6">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Ghế xoay công thái học (Ergonomic):</strong> Nâng đỡ đốt sống cổ và thắt lưng, lưới thoáng khí chống tích tụ mồ hôi.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Ghế ăn bọc da / vải nỉ:</strong> Đệm mút D40 đàn hồi cao, chống lún xẹp, bọc da kháng nước dễ vệ sinh.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-blue-600 mt-1"></i>
+                                <span><strong>Ghế cafe &amp; ghế thư giãn:</strong> Khung thép hoặc gỗ cao cấp, đa dạng kiểu dáng phù hợp mọi concept decor.</span>
+                            </li>
+                        </ul>
+                        <div class="flex gap-3">
+                            <a href="#contact" class="px-5 py-2.5 rounded-lg bg-blue-600 text-white font-semibold text-xs sm:text-sm hover:bg-blue-700 transition">Báo Giá Ghế</a>
+                            <a href="tel:098xxxxxxx" class="px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 font-semibold text-xs sm:text-sm hover:bg-slate-100 transition">Tư Vấn Số Lượng Lớn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US (Ưu Điểm) -->
+    <section id="strengths" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Cam kết giá trị</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+                    Tại Sao Chọn Nội Thất Nhật Phát?
+                </h2>
+                <p class="text-slate-600">Chúng tôi đồng hành cùng khách hàng từ khâu lên ý tưởng bản vẽ tới lúc bàn giao chìa khóa.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-blue-600 text-white flex items-center justify-center text-2xl mb-5 shadow-lg shadow-blue-500/30">
+                        💎
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Chất lượng vượt trội</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Đạt tiêu chuẩn kỹ thuật cao, nguyên liệu nhôm kính bền bỉ, chống chịu mọi điều kiện khí hậu ẩm ướt tại Việt Nam.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-2xl mb-5 shadow-lg shadow-indigo-500/30">
+                        🛠️
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Thi công chuyên nghiệp</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Đội ngũ thợ giàu kinh nghiệm, thi công tỉ mỉ từng chi tiết, đảm bảo đúng tiến độ và an toàn lao động tuyệt đối.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-2xl mb-5 shadow-lg shadow-emerald-500/30">
+                        💰
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Giá cả cạnh tranh</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Sản xuất trực tiếp tại xưởng, không qua trung gian giúp tiết kiệm 15% - 25% tổng chi phí đầu tư cho khách hàng.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-amber-500 text-white flex items-center justify-center text-2xl mb-5 shadow-lg shadow-amber-500/30">
+                        🛡️
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Bảo hành dài hạn</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Bảo hành lên tới 5 năm cho phụ kiện &amp; nhôm kính, hỗ trợ kỹ thuật và bảo dưỡng chu đáo trọn đời sản phẩm.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-16 sm:py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                
+                <!-- Info Column -->
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-900/60 border border-blue-700/50 px-3 py-1 rounded-full">
+                        Liên hệ trực tiếp
+                    </span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mt-4 mb-6">
+                        CÔNG TY TNHH <br><span class="text-blue-400">NỘI THẤT NHẬT PHÁT</span>
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+                        Quý khách cần tư vấn thiết kế, nhận bảng báo giá chi tiết từng hạng mục hoặc yêu cầu kỹ thuật viên đến tận công trình khảo sát miễn phí? Vui lòng liên hệ với chúng tôi:
+                    </p>
+
+                    <div class="space-y-4 text-sm text-slate-300">
+                        <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-800/70 border border-slate-700">
+                            <i class="fa-solid fa-map-location-dot text-blue-400 text-lg mt-0.5"></i>
+                            <div>
+                                <span class="text-white font-semibold block">Địa chỉ trụ sở:</span>
+                                Số 457 đường La Thành, Phường Thành Công, Quận Ba Đình, Hà Nội
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-800/70 border border-slate-700">
+                            <i class="fa-solid fa-id-card-clip text-emerald-400 text-lg mt-0.5"></i>
+                            <div>
+                                <span class="text-white font-semibold block">Mã số thuế doanh nghiệp:</span>
+                                0108286072
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-800/70 border border-slate-700">
+                            <i class="fa-solid fa-phone-volume text-amber-400 text-lg mt-0.5"></i>
+                            <div>
+                                <span class="text-white font-semibold block">Hotline &amp; Zalo tư vấn 24/7:</span>
+                                <span class="text-amber-400 font-bold text-base">098x xxx xxx</span> (Cập nhật SĐT của bạn)
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-800/70 border border-slate-700">
+                            <i class="fa-solid fa-envelope text-sky-400 text-lg mt-0.5"></i>
+                            <div>
+                                <span class="text-white font-semibold block">Email tiếp nhận thông tin:</span>
+                                contact@noithatnhatphat.vn
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-800/70 border border-slate-700">
+                            <i class="fa-solid fa-globe text-indigo-400 text-lg mt-0.5"></i>
+                            <div>
+                                <span class="text-white font-semibold block">Website chính thức:</span>
+                                noithatnhatphat.vn
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 text-slate-900 shadow-2xl">
+                    <h3 class="font-heading text-xl sm:text-2xl font-bold text-slate-900 mb-2">
+                        📝 Gửi Yêu Cầu Tư Vấn &amp; Báo Giá
+                    </h3>
+                    <p class="text-slate-500 text-xs sm:text-sm mb-6">
+                        Điền thông tin bên dưới, nhân viên kỹ thuật Nhật Phát sẽ liên hệ lại trong vòng 15 phút.
+                    </p>
+
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Họ và tên của bạn: *</label>
+                            <input type="text" id="custName" required placeholder="Ví dụ: Nguyễn Văn An" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Số điện thoại liên hệ: *</label>
+                            <input type="tel" id="custPhone" required placeholder="Ví dụ: 0912 345 678" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Sản phẩm bạn quan tâm:</label>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                                    <input type="checkbox" name="product" value="Tủ nhôm kính" checked class="rounded text-blue-600"> Tủ nhôm kính
+                                </label>
+                                <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                                    <input type="checkbox" name="product" value="Cửa nhôm" class="rounded text-blue-600"> Cửa nhôm kính
+                                </label>
+                                <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                                    <input type="checkbox" name="product" value="Kính cường lực" class="rounded text-blue-600"> Kính cường lực
+                                </label>
+                                <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                                    <input type="checkbox" name="product" value="Bàn nội thất" class="rounded text-blue-600"> Bàn nội thất
+                                </label>
+                                <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 hover:bg-slate-50 cursor-pointer col-span-2">
+                                    <input type="checkbox" name="product" value="Ghế cao cấp" class="rounded text-blue-600"> Ghế công thái học / ghế bọc da
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nội dung lời nhắn hoặc kích thước dự kiến:</label>
+                            <textarea id="custMsg" rows="3" placeholder="Nhập địa chỉ khảo sát, kích thước sơ bộ hoặc mẫu mã bạn cần..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Gửi Yêu Cầu Tư Vấn Ngay
+                        </button>
+                    </form>
+
+                    <!-- Success Alert -->
+                    <div id="formSuccess" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm">
+                        <div class="font-bold flex items-center gap-2 mb-1">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-lg"></i> Tiếp nhận thành công!
+                        </div>
+                        <p id="successMsgText">Cảm ơn bạn! Nội Thất Nhật Phát sẽ liên hệ hỗ trợ bạn trong thời gian sớm nhất.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-8 text-xs border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div>
+                © 2026 <strong>CÔNG TY TNHH NỘI THẤT NHẬT PHÁT</strong>. All rights reserved.
+                <div class="text-slate-500 mt-1">Mã số thuế: 0108286072 • Số 457 La Thành, Ba Đình, Hà Nội</div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#home" class="hover:text-white transition">Lên đầu trang <i class="fa-solid fa-arrow-up ml-1"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Quick Contact Buttons -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+        <a href="tel:098xxxxxxx" title="Gọi Hotline" class="w-12 h-12 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center text-xl shadow-xl transition transform hover:scale-110 animate-bounce">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="#contact" title="Gửi yêu cầu" class="w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center text-xl shadow-xl transition transform hover:scale-110">
+            <i class="fa-solid fa-comment-dots"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Tab switcher
+        function switchTab(tabId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(c => {
+                c.classList.add('hidden');
+                c.classList.remove('block');
+            });
+
+            // Deactivate all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(b => {
+                b.classList.remove('active');
+            });
+
+            // Show selected tab
+            const targetContent = document.getElementById('tab-' + tabId);
+            if (targetContent) {
+                targetContent.classList.remove('hidden');
+                targetContent.classList.add('block');
+            }
+
+            // Activate button
+            const targetBtn = document.getElementById('tab-btn-' + tabId);
+            if (targetBtn) {
+                targetBtn.classList.add('active');
+            }
+        }
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Form submit handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            
+            const successBox = document.getElementById('formSuccess');
+            const msgText = document.getElementById('successMsgText');
+            
+            msgText.innerHTML = `Cảm ơn anh/chị <strong>${name}</strong>! Nội Thất Nhật Phát đã nhận được thông tin và sẽ gọi tư vấn qua số <strong>${phone}</strong> trong vòng 15 phút.`;
+            successBox.classList.remove('hidden');
+            
+            // Scroll to alert
+            successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+</html>
